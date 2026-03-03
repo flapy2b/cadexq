@@ -4,19 +4,20 @@
 
 1. Placez le dossier `Cadexq` sur votre serveur web
 2. Assurez-vous que PHP est installé et configuré
-3. Ouvrez `client/index.html` dans un navigateur mobile
+3. Renommer `config.default.ini` en `config.ini` et modifier l'URL du serveur
+4. Ouvrez `client/index.html` dans un navigateur mobile
 
 ## Utilisation
 
 1. **Créer une partie** : Un joueur crée une partie et obtient un code à 3 chiffres
 2. **Rejoindre une partie** : Les autres joueurs utilisent le code pour rejoindre
 3. **Jouer** : À tour de rôle, chaque joueur écrit une phrase en voyant le dernier mot écrit
-4. **Terminer** : Un joueur écrit "fin" pour terminer la partie
+4. **Terminer** : Cliquer sur le bouton Terminer pour afficher le texte final
 
 ## Structure
 
 - `server/game.php` : Serveur PHP pour gérer les parties
-- `client/index.html` : Interface web mobile
+- `index.html` : Interface web mobile
 - `data/` : Stockage des données des parties (fichiers JSON)
 
 ## Fonctionnalités
@@ -33,6 +34,6 @@
 2. Joueur 2 : "mange une souris"
 3. Joueur 3 : "qui avait volé du fromage"
 4. Joueur 1 : "dans la cuisine"
-5. Joueur 2 : "fin"
+5. Joueur 2 : Terminer la partie
 
-Texte final : "Le chat mange une souris qui avait volé du fromage dans la cuisine"
+**Texte final** : "Le chat mange une souris qui avait volé du fromage dans la cuisine"
