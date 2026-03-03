@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadavre Exquis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadavre Exquis</h1>
+        
+        <div id="create-section" class="section">
+            <h2>Créer une nouvelle partie</h2>
+            <div class="form-group">
+                <label for="create-name">Votre nom</label>
+                <input type="text" id="create-name" placeholder="Entrez votre nom">
+            </div>
+            <button id="create-btn">Créer une partie</button>
+            <div id="create-error" class="error hidden"></div>
+        </div>
+        
+        <div id="waiting-section" class="section hidden">
+            <h2>Partie créée !</h2>
+            <div class="game-info">
+                <p><strong>Code de partie :</strong> <span id="game-code"></span></p>
+                <p>Partagez ce code avec les autres joueurs pour qu'ils puissent rejoindre la partie.</p>
+            </div>
+            <div class="players-list">
+                <h3>Joueurs (<span id="waiting-player-count">1</span>)</h3>
+                <ul id="waiting-players-list">
+                    <li id="current-player-name"></li>
+                </ul>
+            </div>
+            <button id="start-game-btn" disabled>Commencer la partie (minimum 2 joueurs)</button>
+            <div id="waiting-error" class="error hidden"></div>
+        </div>
+        
+        <div id="join-section" class="section">
+            <h2>Rejoindre une partie</h2>
+            <div class="form-group">
+                <label for="join-code">Code de partie</label>
+                <input type="tel" id="join-code" placeholder="Ex: 123" maxlength="3">
+            </div>
+            <div class="form-group">
+                <label for="join-name">Votre nom</label>
+                <input type="text" id="join-name" placeholder="Entrez votre nom">
+            </div>
+            <button id="join-btn">Rejoindre la partie</button>
+            <div id="join-error" class="error hidden"></div>
+        </div>
+        
+        <div id="game-section" class="section hidden">
+            
+            <div id="game-progress">
+                <h2>Partie en cours</h2>
+            
+                <div class="players-list">
+                    <h3>Joueurs (<span id="player-count">0</span>)</h3>
+                    <ul id="players-list"></ul>
+                </div>
+                
+                <div class="status" id="game-status">En attente...</div>
+                
+                <div id="game-info" class="hidden">
+                    <div class="last-word" id="last-word-display">
+                        <strong>Dernier mot :</strong> <span id="last-word"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="line-input">Votre phrase</label>
+                        <textarea id="line-input" class="text-area" placeholder="Écrivez votre phrase..." rows="3"></textarea>
+                    </div>
+                    
+                    <button id="submit-line-btn" disabled>Soumettre</button>
+                    <div id="submit-error" class="error hidden"></div>
+                </div>
+            </div>
+
+            <div id="final-text-section" class="hidden">
+                <h3>Texte final</h3>
+                <div id="final-text" class="final-text"></div>
+            </div>
+            
+            <div id="game-actions" class="hidden">
+                <div style="margin-top: 20px; display: flex; gap: 10px;">
+                    <button id="end-game-btn" class="button-secondary">Terminer la partie</button>
+                </div>
+            </div>
+
+            <div id="end-actions" class="hidden">
+                <div style="margin-top: 20px; display: flex; gap: 10px;">
+                    <button id="quit-game-btn" class="button-secondary">Quitter la partie</button>
+                    <button id="restart-game-btn" class="button-secondary">Recommencer la partie</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

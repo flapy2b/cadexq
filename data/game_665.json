@@ -1,0 +1,15 @@
+{
+    "code": "665",
+    "players": [
+        "flo",
+        "a"
+    ],
+    "lines": [
+        {
+            "player": "flo",
+            "text": "re ter ter ter ter"
+        }
+    ],
+    "current_player_index": 1,
+    "status": "playing"
+}
