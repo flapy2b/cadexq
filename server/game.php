@@ -8,7 +8,7 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 // Load configuration from config.ini
 $config = parse_ini_file(__DIR__ . '/../config.ini');
-define('URL', $config['server_url']);
+define('SERVER_URL', $config['url']);
 
 // Chemin vers le fichier de données
 $dataDir = __DIR__ . '/../data/';
