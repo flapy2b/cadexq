@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     async function updateWaitingState() {
         try {
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mettre à jour l'état de la partie
     async function updateGameState() {
         try {
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
     endGameBtn.addEventListener('click', async function() {
         try {
             // D'abord récupérer l'état actuel pour obtenir les lignes
-            const stateResponse = await fetch('http://localhost:8000/server/game.php', {
+            const stateResponse = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -313,7 +313,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Ensuite terminer la partie
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -351,7 +351,7 @@ document.addEventListener('DOMContentLoaded', function() {
     quitGameBtn.addEventListener('click', async function() {
         try {
             // Supprimer la partie
-            await fetch('http://localhost:8000/server/game.php', {
+            await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function() {
     restartGameBtn.addEventListener('click', async function() {
         try {
             // Créer une nouvelle partie avec le même code
-            const response = await fetch('http://localhost:8000/server/game.php', {
+            const response = await fetch('https://flapy.xyz/cadexq/server/game.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -388,7 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Rejoindre les autres joueurs
             for (const otherPlayer of playersList) {
                 if (otherPlayer !== playerName) {
-                    await fetch('http://localhost:8000/server/game.php', {
+                    await fetch('https://flapy.xyz/cadexq/server/game.php', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded',

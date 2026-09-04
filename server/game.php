@@ -5,10 +5,7 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Configuration du serveur
-
-// Load configuration from config.ini
-$config = parse_ini_file(__DIR__ . '/../config.ini');
-define('SERVER_URL', $config['url']);
+define('SERVER_URL', 'https://flapy.xyz/cadexq/');
 
 // Chemin vers le fichier de données
 $dataDir = __DIR__ . '/../data/';
