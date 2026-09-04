@@ -5,7 +5,10 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // Configuration du serveur
-define('SERVER_URL', 'http://localhost:8000');
+
+// Load configuration from config.ini
+$config = parse_ini_file(__DIR__ . '/../config.ini');
+define('URL', $config['server_url']);
 
 // Chemin vers le fichier de données
 $dataDir = __DIR__ . '/../data/';
